@@ -1,0 +1,31 @@
+<% include partials/header %>
+        <div>
+          <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">stockSheet</a>
+          </nav>
+         </div>    
+        <div class="container">
+            <table border=1 width="85%" style="margin:20px;text-align:center">
+            <tr>
+                <th>Reg No.</th>
+                <th>Car Name</th>
+                <th>Company</th>
+                <th>Cost</th>
+                <th>Kms Driven</th>
+                <th>Location</th>
+                <th>Insurance</th>
+            </tr>
+            <% cars.forEach(function(car){ %>
+                <tr>
+                    <td><%= car.regNo %></td>
+                    <td><%=car.carName %></td>
+                    <td><%= car.comapany%></td>
+                    <td><%=car.cost %></td>
+                    <td><%=car.kms%></td>
+                    <td><%=car.location%></td>
+                    <td><%=car.insurance%></td>
+                </tr>
+            <%  }) %>
+        </table>
+        </div>
+<% include partials/footer %>
