@@ -1,13 +1,12 @@
 {
   "name": "v1",
   "version": "1.0.0",
-  "description": "",
+  "description": "new start",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon run app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Rajdeep",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -15,8 +14,6 @@
     "express": "^4.16.4",
     "locus": "^2.0.1",
     "mongoose": "^5.4.3"
-  },
-  "devDependencies": {
-    "nodemon": "^1.18.9"
   }
+ 
 }

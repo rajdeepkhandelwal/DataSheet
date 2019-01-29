@@ -25,7 +25,8 @@
       
       /*display:inline;*/
       margin-top:2%;
-      margin-left:2%;
+      /* margin-right:2%; */
+      padding-left: auto;
     
 }
 #hadddetails{
