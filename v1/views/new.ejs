@@ -1,19 +1,94 @@
 <% include partials/header %>
 
-<h2>Add Details</h2>
-<form action="/" method="POST">
-    <input type="text" name="car[regNo]" placeholder="register no">
-    <input type="text" name="car[carName]" placeholder="car name">
-    <input type="text" name="car[comapany]" placeholder="comapany name">
-    <input type="number" name="car[cost]" placeholder="price">
-    <input type="number" name="car[kms]" placeholder="kms driven">
-    <input type="text" name="car[location]" placeholder="location">
-    <input type="text" name="car[insurance]" placeholder="yes or no">
-    <input type="submit" value="submit">
+<h2 id='hadddetails'>Add Details</h2>
+<form action="/" method="POST" style="margin-left: 40%;margin-top: 2%;">
+   <div id="container1">
+      
+    <div class="form-group row">
+    <label for="regno" class="col-sm-2 col-form-label">Reg.No.</label>
+    <div class="col-sm-10">
+    <input type="text" id="regno" class="form-control mr-sm-2"  name="car[regNo]"     placeholder="register no">
+    </div>
+    </div>
+    <div class="form-group row">
+        <label for="carName"  class="col-sm-2 col-form-label">Car Name</label>
+         <div class="col-sm-10">
+    <input type="text" id="carname" class="form-control mr-sm-2"  name="car[carName]"   placeholder="car name">
+      </div>
+    </div>
+      <div class="form-group row">
+        <label for="comapany"  class="col-sm-2 col-form-label">Company</label>
+         <div class="col-sm-10">
+    <input type="text" id="comapany" class="form-control mr-sm-2"   name="car[company]"  placeholder="comapany name">
+          </div>
+    </div>
+        <div class="form-group row">
+        <label for="cost"  class="col-sm-2 col-form-label">Cost</label>
+         <div class="col-sm-10">
+    <input type="number" id="cost" class="form-control mr-sm-2"  name="car[cost]"      placeholder="price">
+          </div>
+    </div>
+        <div class="form-group row">
+        <label for="kms"  class="col-sm-2 col-form-label">KM Driven</label>
+         <div class="col-sm-10">
+    <input type="number" id="kms" class="form-control mr-sm-2"  name="car[kms]"       placeholder="kms driven">
+          </div>
+    </div>
+        <div class="form-group row">
+        <label for="location"  class="col-sm-2 col-form-label">Location</label>
+         <div class="col-sm-10">
+    <input type="text" id="location" class="form-control mr-sm-2"   name="car[location]"  placeholder="location">
+          </div>
+    </div>
+       <div id="divinsurance" class="form-group row" >
+    <div class="col-sm-4">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Insurance</label>
+  <select class="custom-select my-1 mr-sm-2" name="car[insurance]" id="inlineFormCustomSelectPref">
+    <option selected>Choose...</option>
+    <option value="Expired">Expired</option>
+    <option value="Comphrensive">Comphrensive</option>
+    <option value="Third-Party">Third-Party</option>
+  </select>
+    </div>
+    </div>
+    
+    <input type="submit" class="btn btn-secondary" value="submit">
+    
+    </div>
 </form>
 
 
-
-
+  
+        <div class="container"  style="margin-top:5%;" >
+            <table class="table table-hover" id="tblcar" >
+            <tr>
+                <th>Reg No.</th>
+                <th>Car Name</th>
+                <th>Company</th>
+                <th>Cost</th>
+                <th>Kms Driven</th>
+                <th>Location</th>
+                <th>Insurance</th>
+            </tr>
+            <% cars.forEach(function(car){ %>
+                <tr>
+                    <td><%= car.regNo %></td>
+                    <td><%=car.carName %></td>
+                    <td><%= car.company%></td>
+                    <td><%=car.cost %></td>
+                    <td><%=car.kms%></td>
+                    <td><%=car.location%></td>
+                    <td><%=car.insurance%></td>
+                </tr>
+            <%  }) %>
+        </table>
+        </div>
+        
+        <script>
+            var rows =<%-JSON.stringify(cars)%>
+            console.log(rows)
+            sessionStorage.setItem('data', rows)
+        </script>
+  
 
 <% include partials/footer %>

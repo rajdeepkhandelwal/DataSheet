@@ -3,11 +3,21 @@
     <head>
         <title>stockSheet</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
+        <link rel="stylesheet"  type="text/css" href="./stylesheets/main.css">
     </head>
     <body>
          <div>
           <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand" href="/">stockSheet</a>
+
+            
+        <a href="/admin" ><button type="button" class="btn btn-secondary" id="btnadmin">admin</button></a> 
+    </div>  
           </nav>
+          <div id="divsearch">
+             <form class="form-inline my-2 my-lg-0" action="/" method="GET">
+                 <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search by Company" aria-label="Search">
+                 <button class="btn btn-secondary" type="submit">Search</button>
+              </form>
+              </div>
          </div> 

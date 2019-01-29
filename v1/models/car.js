@@ -1,13 +1,17 @@
 // var express = require("express");
 var mongoose = require("mongoose");
 var carSchema = new mongoose.Schema({
+    
     regNo   :String,
     carName :String,
-    comapany:String,
+    company:String,
     cost    :Number,
     kms     :Number,
     location:String,
-    insurance:String
+    insurance:String,
+    // dateadded:Date,
+//    timeadded: Timestamp
+    
 });
 
 module.exports=mongoose.model("Car",carSchema);

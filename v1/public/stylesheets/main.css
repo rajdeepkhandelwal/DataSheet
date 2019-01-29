@@ -1,0 +1,34 @@
+#container1
+{
+    margin-right: 2%
+}
+#container1 .form-control.mr-sm-2
+{
+      width: 25%; 
+      /*padding: 1%;*/
+    
+}
+#inlineFormCustomSelectPref
+{
+   width: 135%;      
+}
+
+.table.table-hover{
+      
+      
+     width:85%;
+     margin:20px;
+     text-align:center; 
+}
+
+#divsearch{
+      
+      /*display:inline;*/
+      margin-top:2%;
+      margin-left:2%;
+    
+}
+#hadddetails{
+     margin-top:2%;
+     margin-left:45%;
+}
