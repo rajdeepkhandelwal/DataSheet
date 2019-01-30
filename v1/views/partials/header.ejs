@@ -5,12 +5,11 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet"  type="text/css" href="./stylesheets/main.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript" src="./js/search.js"></script>
 
 
     </head>
     <body>
-         <div>
+         <!-- <div>
           <nav class="navbar navbar-dark bg-light">
             <a class="navbar-brand" href="/"><img src="/images/brandLogo.png" alt="Brand-image" style="height:2.5em;"></a>
 
@@ -24,4 +23,14 @@
                  <button class="btn btn-secondary" type="submit">Search</button>
               </form>
               </div>
-         </div> 
+         </div>  -->
+
+         <nav class="navbar navbar-light bg-light justify-content-between">
+            <a class="navbar-brand" href="/"><img src="/images/brandLogo.png" alt="Brand-image" style="height:2.5em;"></a>
+            <form class="form-inline" action="/getdata" method="GET">
+              <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <a href="/admin" ><button type="button" class="btn btn-secondary" id="btnadmin">admin</button></a> 
+
+          </nav>

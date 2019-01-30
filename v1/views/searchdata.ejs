@@ -3,7 +3,7 @@
 
           
         <div class="container">
-            <table border=1 width="85%" style="margin:20px;text-align:center">
+            <table border=1 width="90%" style="margin:20px;text-align:center">
             <tr>
                 <th>Reg No.</th>
                 <th>Car Name</th>
@@ -25,7 +25,12 @@
                 </tr>
             <%  }) %>
         </table>
-        </div>
-  
+        
+        <div class="container">
+            <% if(noMatch !== undefined){%>
+                <h4 style="color:red;"><%=noMatch%></h4>
+            <% } %>
+        </div>  
+</div>
       
 <% include partials/footer %>
